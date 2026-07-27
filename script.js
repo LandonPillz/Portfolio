@@ -3,13 +3,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const navigation = document.querySelector(".main-nav");
-  const navigationLinks = document.querySelectorAll(".main-nav a");
+  const navigationLinks = document.querySelectorAll(
+    '.main-nav a[href^="#"]'
+  );
   const revealElements = document.querySelectorAll(".reveal");
-  const sections = document.querySelectorAll("main section[id]");
+  const pageSections = document.querySelectorAll("main section[id]");
   const currentYear = document.querySelector("#current-year");
 
-  /*
-   * Mobile navigation
+  /**
+   * Close the mobile navigation.
    */
   const closeMenu = () => {
     menuToggle?.classList.remove("active");
@@ -18,12 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle?.setAttribute("aria-expanded", "false");
   };
 
+  /**
+   * Open or close the mobile navigation.
+   */
   menuToggle?.addEventListener("click", () => {
-    const isOpen = navigation?.classList.toggle("open");
+    if (!navigation) {
+      return;
+    }
 
-    menuToggle.classList.toggle("active", Boolean(isOpen));
-    document.body.classList.toggle("menu-open", Boolean(isOpen));
-    menuToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+    const isOpen = navigation.classList.toggle("open");
+
+    menuToggle.classList.toggle("active", isOpen);
+    document.body.classList.toggle("menu-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
   navigationLinks.forEach((link) => {
@@ -36,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /*
-   * Scroll reveal animation
+  /**
+   * Reveal sections and cards as the user scrolls.
    */
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver(
@@ -52,8 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
       {
-        threshold: 0.12,
-        rootMargin: "0px 0px -40px 0px"
+        threshold: 0.1,
+        rootMargin: "0px 0px -45px 0px"
       }
     );
 
@@ -66,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /*
-   * Active navigation link
+  /**
+   * Highlight the navigation link for the section currently in view.
    */
   if ("IntersectionObserver" in window) {
     const sectionObserver = new IntersectionObserver(
@@ -80,28 +89,26 @@ document.addEventListener("DOMContentLoaded", () => {
           const sectionId = entry.target.getAttribute("id");
 
           navigationLinks.forEach((link) => {
-            const href = link.getAttribute("href");
-
             link.classList.toggle(
               "active",
-              href === `#${sectionId}`
+              link.getAttribute("href") === `#${sectionId}`
             );
           });
         });
       },
       {
-        threshold: 0.35,
-        rootMargin: "-15% 0px -50% 0px"
+        threshold: 0.25,
+        rootMargin: "-15% 0px -55% 0px"
       }
     );
 
-    sections.forEach((section) => {
+    pageSections.forEach((section) => {
       sectionObserver.observe(section);
     });
   }
 
-  /*
-   * Automatically update footer year
+  /**
+   * Automatically maintain the footer copyright year.
    */
   if (currentYear) {
     currentYear.textContent = String(new Date().getFullYear());
