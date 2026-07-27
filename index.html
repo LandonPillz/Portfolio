@@ -1,93 +1,695 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landon Pillar | Data Analytics & Programming Student</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Portfolio of Landon Pillar, a data analytics and programming student specializing in SQL, Excel, Power BI, Tableau, and Python."
+  >
+
+  <title>Landon Pillar | Data Analyst Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <h1>Landon Pillar</h1>
-      <h2>Data Analytics & Programming Student</h2>
-      <nav>
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="brand" aria-label="Landon Pillar home">
+        <span class="brand-mark">LP</span>
+
+        <span class="brand-text">
+          <strong>Landon Pillar</strong>
+          <small>Data Analyst Portfolio</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
+
+        <a
+          class="nav-button"
+          href="resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
       </nav>
     </div>
   </header>
 
-  <section id="about" class="section">
-    <div class="container about-container">
-      <img src="landon.png" alt="Landon Pillar" class="profile-pic" />
-      <div class="about-text">
-        <h3>About Me</h3>
-        <p>
-          Hi, I'm <strong>Landon Pillar</strong> - a data-driven college student pursuing a Bachelor of Applied Science in Data Analytics and Programming. I specialize in turning raw data into actionable insights and compelling visual stories.
-        </p>
-        <p>
-          My toolkit includes <strong>Power BI, Tableau, Excel, SQL, and Python</strong>, and I'm constantly learning new tools to sharpen my analytical edge. Whether it's uncovering trends, cleaning messy datasets, or building dashboards that tell a story, I enjoy solving real-world problems with data.
-        </p>
-        <p>
-          I’m actively building a portfolio that showcases my ability to not just analyze data, but communicate it clearly. I'm passionate about the intersection of data, technology, and decision-making — and I'm excited to bring that energy to teams that value curiosity and clarity.
-        </p>
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">
+            Data Analytics • Business Intelligence • Programming
+          </p>
+
+          <h1>
+            Turning complex data into
+            <span>clear business decisions.</span>
+          </h1>
+
+          <p class="hero-description">
+            I am Landon Pillar, a Data Analytics and Programming student
+            building end-to-end analytics projects with SQL, Excel,
+            Power BI, Tableau, and Python.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              Explore My Projects
+            </a>
+
+            <a class="button button-secondary" href="#contact">
+              Contact Me
+            </a>
+          </div>
+
+          <div class="hero-links">
+            <a
+              href="https://github.com/LandonPillz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/landon-pillar-95657829b/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a href="mailto:landonpillar4@gmail.com">
+              Email
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-profile reveal" aria-label="Profile summary">
+          <div class="profile-image-wrapper">
+            <img
+              src="landon.png"
+              alt="Portrait of Landon Pillar"
+              class="profile-image"
+            >
+
+            <span class="availability-badge">
+              <span class="availability-dot"></span>
+              Open to data opportunities
+            </span>
+          </div>
+
+          <div class="profile-summary">
+            <p class="profile-label">Current focus</p>
+
+            <h2>
+              Building portfolio-ready analytics solutions
+            </h2>
+
+            <div class="profile-stats">
+              <div>
+                <strong>SQL</strong>
+                <span>Data modeling</span>
+              </div>
+
+              <div>
+                <strong>BI</strong>
+                <span>Dashboard design</span>
+              </div>
+
+              <div>
+                <strong>Python</strong>
+                <span>Analysis and automation</span>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
-    </div>
-  </section>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="Coffee_Dashboard.png" alt="Coffee Shop Dashboard">
-          <h3>Coffee & Cream Sales Dashboard (Power BI)</h3>
-          <p>
-            Created a Power BI dashboard to analyze sales at a fictional bakery and coffee shop. The report includes monthly transactions, item performance, payment method usage, and profitability metrics.
-          </p>
-          <a href="https://github.com/LandonPillz/Coffee_Shop_Analysis" target="_blank">View on GitHub</a>
+      <div class="container hero-metrics reveal">
+        <div class="metric">
+          <span class="metric-number">5+</span>
+          <span class="metric-label">Analytics tools</span>
         </div>
 
-        <div class="project-card">
-          <img src="salesdashboard.png" alt="E-Commerce Dashboard">
-          <h3>E-Commerce Sales Analysis with Tableau</h3>
-          <p>
-            A multi-year Tableau dashboard analyzing U.S. e-commerce sales from 2015 to 2018. Includes geographic insights, category comparisons, seasonal trends, and year-over-year performance analysis.
-          </p>
-          <p>
-            <a href="https://github.com/LandonPillz/E-Commerce-Sales-Analysis" target="_blank">View on GitHub</a> |
-            <a href="https://public.tableau.com/app/profile/landon.pillar/viz/E-CommerceProject_17530711383760/SalesDashboard" target="_blank">View Dashboard</a>
-          </p>
+        <div class="metric">
+          <span class="metric-number">End-to-End</span>
+          <span class="metric-label">Project workflows</span>
         </div>
 
-        <div class="project-card">
-          <img src="vehicle-dashboard.png" alt="Vehicle Sales Dashboard">
-          <h3>DrivePro AutoHouse Vehicle Sales Analysis</h3>
-          <p>
-            Used Power BI to analyze U.S. vehicle sales from 2014–2015. Included trends, pricing, and state comparisons.
-          </p>
-          <a href="https://github.com/LandonPillz/vehicle-sales-analysis-drivepro" target="_blank">View on GitHub</a>
+        <div class="metric">
+          <span class="metric-number">Business-First</span>
+          <span class="metric-label">Analytical approach</span>
+        </div>
+
+        <div class="metric">
+          <span class="metric-number">Portfolio</span>
+          <span class="metric-label">Focused development</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <ul class="contact-list">
-        <li><a href="https://www.linkedin.com/in/landon-pillar-95657829b/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/LandonPillz" target="_blank">GitHub</a></li>
-        <li><a href="mailto:landonpillar4@gmail.com">Email Me</a></li>
-      </ul>
-    </div>
-  </section>
+    <!-- About -->
+    <section id="about" class="section section-light">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About me</p>
 
-  <footer>
-    <p>© 2025 Landon Pillar</p>
+          <h2>
+            Analytical thinking supported by technical execution.
+          </h2>
+
+          <p>
+            I combine data analysis, visualization, and programming to
+            transform raw information into practical recommendations.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-story reveal">
+            <p>
+              I am pursuing a Bachelor of Applied Science in
+              <strong>Data Analytics and Programming</strong>. My work
+              focuses on organizing complex datasets, identifying meaningful
+              patterns, and communicating results in ways that support
+              decision-making.
+            </p>
+
+            <p>
+              I have experience using
+              <strong>SQL, Excel, Power BI, Tableau, and Python</strong>
+              across projects involving data cleaning, relational modeling,
+              KPI development, dashboard creation, and business reporting.
+            </p>
+
+            <p>
+              My goal is not simply to produce charts. I aim to understand
+              the business question, build a reliable analytical process,
+              and present the final result with clarity.
+            </p>
+          </article>
+
+          <div class="about-highlights reveal">
+            <article class="highlight-card">
+              <span class="highlight-number">01</span>
+              <h3>Business-focused analysis</h3>
+              <p>
+                Projects begin with practical questions and conclude with
+                insights that can guide action.
+              </p>
+            </article>
+
+            <article class="highlight-card">
+              <span class="highlight-number">02</span>
+              <h3>End-to-end workflows</h3>
+              <p>
+                I work across data import, validation, transformation,
+                analysis, visualization, and documentation.
+              </p>
+            </article>
+
+            <article class="highlight-card">
+              <span class="highlight-number">03</span>
+              <h3>Clear communication</h3>
+              <p>
+                Technical findings are translated into concise dashboards,
+                summaries, and portfolio case studies.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-dark">
+      <div class="container">
+        <div class="section-heading section-heading-dark reveal">
+          <p class="eyebrow">Technical capabilities</p>
+
+          <h2>
+            Tools for analysis, visualization, and decision support.
+          </h2>
+
+          <p>
+            My portfolio emphasizes the tools and workflows commonly used
+            in entry-level data analyst and business intelligence roles.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card skill-card-large reveal">
+            <div class="skill-icon">SQL</div>
+
+            <div>
+              <p class="skill-category">Database analysis</p>
+              <h3>SQL & MySQL</h3>
+
+              <p>
+                Relational database design, data validation, joins,
+                aggregations, views, window functions, and analytical queries.
+              </p>
+
+              <div class="tag-list">
+                <span>MySQL Workbench</span>
+                <span>Star Schemas</span>
+                <span>Views</span>
+                <span>Window Functions</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">BI</div>
+
+            <p class="skill-category">Business intelligence</p>
+            <h3>Power BI</h3>
+
+            <p>
+              Interactive dashboards, data models, KPI cards, DAX measures,
+              filtering, and executive reporting.
+            </p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">XL</div>
+
+            <p class="skill-category">Spreadsheet analytics</p>
+            <h3>Microsoft Excel</h3>
+
+            <p>
+              Power Query, PivotTables, formulas, KPI summaries, charts,
+              validation, and dashboard development.
+            </p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">PY</div>
+
+            <p class="skill-category">Programming</p>
+            <h3>Python</h3>
+
+            <p>
+              Data preparation, exploratory analysis, automation, statistics,
+              and predictive modeling.
+            </p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">TV</div>
+
+            <p class="skill-category">Visual analytics</p>
+            <h3>Tableau</h3>
+
+            <p>
+              Interactive dashboards, geographic analysis, parameters,
+              calculated fields, and year-over-year reporting.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section section-light">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+
+          <h2>
+            Projects built around real analytical workflows.
+          </h2>
+
+          <p>
+            Each project combines technical analysis with business
+            questions, documentation, and visual storytelling.
+          </p>
+        </div>
+
+        <!-- Featured Project -->
+        <article class="featured-project reveal">
+          <div class="featured-project-image">
+            <img
+              src="KPI.png"
+              alt="E-commerce sales KPI dashboard created in Excel"
+            >
+
+            <span class="featured-label">Featured project</span>
+          </div>
+
+          <div class="featured-project-content">
+            <div class="project-meta">
+              <span>MySQL</span>
+              <span>Excel</span>
+              <span>Data Modeling</span>
+              <span>Dashboard</span>
+            </div>
+
+            <h3>E-Commerce Sales Analysis with MySQL & Excel</h3>
+
+            <p>
+              An end-to-end retail analytics project using more than
+              51,000 Global Superstore transactions. The workflow includes
+              data import, validation, star-schema development, reusable SQL
+              views, CSV exports, PivotTables, KPIs, and an executive Excel
+              dashboard.
+            </p>
+
+            <ul class="project-results">
+              <li>Created fact and dimension tables for analytical reporting</li>
+              <li>Developed six reusable SQL views</li>
+              <li>Built KPI, regional, category, trend, and shipping visuals</li>
+            </ul>
+
+            <div class="project-actions">
+              <a
+                class="text-link"
+                href="https://github.com/LandonPillz/e-commerce-sales-analysis2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Case Study
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <div class="projects-grid">
+
+          <!-- Coffee Project -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="Coffee_Dashboard.png"
+                alt="Coffee and Cream Power BI sales dashboard"
+              >
+            </div>
+
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span>Power BI</span>
+                <span>Data Cleaning</span>
+                <span>KPIs</span>
+              </div>
+
+              <h3>Coffee & Cream Sales Dashboard</h3>
+
+              <p>
+                A Power BI analysis of sales, profitability, customer payment
+                behavior, monthly activity, and product performance for a
+                fictional coffee shop.
+              </p>
+
+              <a
+                class="text-link"
+                href="https://github.com/LandonPillz/Coffee_Shop_Analysis"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Tableau Project -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="salesdashboard.png"
+                alt="E-commerce Tableau sales dashboard"
+              >
+            </div>
+
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span>Tableau</span>
+                <span>YoY Analysis</span>
+                <span>Mapping</span>
+              </div>
+
+              <h3>E-Commerce Sales Analysis with Tableau</h3>
+
+              <p>
+                A multi-year analysis of geographic performance, sales
+                seasonality, product categories, subcategories, and
+                year-over-year growth.
+              </p>
+
+              <div class="project-actions">
+                <a
+                  class="text-link"
+                  href="https://github.com/LandonPillz/E-Commerce-Sales-Analysis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                  <span aria-hidden="true">↗</span>
+                </a>
+
+                <a
+                  class="text-link"
+                  href="https://public.tableau.com/app/profile/landon.pillar/viz/E-CommerceProject_17530711383760/SalesDashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Dashboard
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vehicle Project -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="vehicle-dashboard.png"
+                alt="DrivePro AutoHouse Power BI vehicle sales dashboard"
+              >
+            </div>
+
+            <div class="project-card-content">
+              <div class="project-meta">
+                <span>Power BI</span>
+                <span>Automotive</span>
+                <span>Data Modeling</span>
+              </div>
+
+              <h3>DrivePro AutoHouse Vehicle Sales Analysis</h3>
+
+              <p>
+                A Power BI case study examining U.S. vehicle sales,
+                manufacturer performance, geographic trends, mileage,
+                pricing, and market value differences.
+              </p>
+
+              <a
+                class="text-link"
+                href="https://github.com/LandonPillz/vehicle-sales-analysis-drivepro"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-footer reveal">
+          <p>
+            Additional projects and source code are available on my GitHub.
+          </p>
+
+          <a
+            class="button button-secondary-dark"
+            href="https://github.com/LandonPillz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore All Repositories
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section section-muted">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Education and development</p>
+
+          <h2>
+            Building a foundation in analytics and programming.
+          </h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <div class="education-marker"></div>
+
+            <p class="education-label">Degree program</p>
+
+            <h3>
+              Bachelor of Applied Science in Data Analytics & Programming
+            </h3>
+
+            <p>
+              Coursework and project work covering database systems,
+              predictive analytics, data visualization, programming,
+              project management, and data privacy.
+            </p>
+
+            <div class="tag-list">
+              <span>Data Analytics</span>
+              <span>Programming</span>
+              <span>Business Intelligence</span>
+              <span>Predictive Modeling</span>
+            </div>
+          </article>
+
+          <article class="career-card reveal">
+            <p class="education-label">Career direction</p>
+
+            <h3>
+              Data Analyst and Business Intelligence roles
+            </h3>
+
+            <p>
+              I am pursuing opportunities where I can support teams through
+              data preparation, reporting, visualization, process improvement,
+              and evidence-based decision-making.
+            </p>
+
+            <a class="text-link" href="#contact">
+              Start a conversation
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div>
+            <p class="eyebrow">Let’s connect</p>
+
+            <h2>
+              Interested in working together?
+            </h2>
+
+            <p>
+              I am open to internships, entry-level data opportunities,
+              portfolio collaborations, and professional conversations.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              class="button button-light"
+              href="mailto:landonpillar4@gmail.com"
+            >
+              Email Me
+            </a>
+
+            <a
+              class="button button-outline-light"
+              href="https://www.linkedin.com/in/landon-pillar-95657829b/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-details reveal">
+          <a href="mailto:landonpillar4@gmail.com">
+            <span>Email</span>
+            <strong>landonpillar4@gmail.com</strong>
+          </a>
+
+          <a
+            href="https://github.com/LandonPillz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>GitHub</span>
+            <strong>github.com/LandonPillz</strong>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/landon-pillar-95657829b/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>LinkedIn</span>
+            <strong>Connect professionally</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>Landon Pillar</strong>
+        <p>Data Analytics & Programming Portfolio</p>
+      </div>
+
+      <p>
+        © <span id="current-year"></span> Landon Pillar.
+        Built with HTML, CSS, and JavaScript.
+      </p>
+    </div>
   </footer>
 </body>
 </html>
